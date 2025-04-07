@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Planning Anglais A0 - Version Numérotée</title>
+    <title>Planning Anglais A0 - Séances filtrées</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Playfair+Display:wght@600&display=swap');
@@ -91,13 +91,27 @@
             color: #6a0dad;
             margin-bottom: 8px;
         }
+    
+        .card.ferie {
+            background: #ffe6e6;
+            border: 2px solid #ff4d4d;
+        }
+
+        .card.ferie::before {
+            content: "🔕";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 1.8em;
+        }
     </style>
+
 </head>
 <body>
     <h1>Planning Anglais A0<br>Didier Laurent</h1>
     <div id="planningContainer">
 
-        <div class="card">
+        <div class="card ferie">
             <div class="session-number">Séance 1</div>
             <div class="field">Jour</div>
             <div class="value">lundi</div>
@@ -111,7 +125,7 @@
             <div class="value">1.011</div>
         </div>
     
-        <div class="card">
+        <div class="card ferie">
             <div class="session-number">Séance 2</div>
             <div class="field">Jour</div>
             <div class="value">mardi</div>
@@ -137,7 +151,7 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
+        <div class="card ferie">
             <div class="session-number">Séance 4</div>
             <div class="field">Jour</div>
             <div class="value">jeudi</div>
@@ -151,7 +165,7 @@
             <div class="value">1.031</div>
         </div>
     
-        <div class="card">
+        <div class="card ferie">
             <div class="session-number">Séance 5</div>
             <div class="field">Jour</div>
             <div class="value">vendredi</div>
@@ -165,7 +179,7 @@
             <div class="value">1.012</div>
         </div>
     
-        <div class="card">
+        <div class="card ferie">
             <div class="session-number">Séance 6</div>
             <div class="field">Jour</div>
             <div class="value">lundi</div>
@@ -179,7 +193,7 @@
             <div class="value">1.016</div>
         </div>
     
-        <div class="card">
+        <div class="card ferie">
             <div class="session-number">Séance 7</div>
             <div class="field">Jour</div>
             <div class="value">mardi</div>
@@ -205,7 +219,7 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
+        <div class="card ferie">
             <div class="session-number">Séance 9</div>
             <div class="field">Jour</div>
             <div class="value">jeudi</div>
@@ -219,7 +233,7 @@
             <div class="value">1.028</div>
         </div>
     
-        <div class="card">
+        <div class="card ferie">
             <div class="session-number">Séance 10</div>
             <div class="field">Jour</div>
             <div class="value">vendredi</div>
@@ -233,8 +247,7 @@
             <div class="value">1.012</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 11</div>
+        <div class="card ferie">
             <div class="field">Jour</div>
             <div class="value">lundi</div>
             <div class="field">Date</div>
@@ -245,8 +258,8 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 12</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 11</div>
             <div class="field">Jour</div>
             <div class="value">mardi</div>
             <div class="field">Date</div>
@@ -260,7 +273,7 @@
         </div>
     
         <div class="card afa">
-            <div class="session-number">Séance 13</div>
+            <div class="session-number">Séance 12</div>
             <div class="field">Jour</div>
             <div class="value">mercredi</div>
             <div class="field">Date</div>
@@ -271,8 +284,8 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 14</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 13</div>
             <div class="field">Jour</div>
             <div class="value">jeudi</div>
             <div class="field">Date</div>
@@ -285,8 +298,8 @@
             <div class="value">1.015</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 15</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 14</div>
             <div class="field">Jour</div>
             <div class="value">vendredi</div>
             <div class="field">Date</div>
@@ -300,7 +313,7 @@
         </div>
     
         <div class="card afa">
-            <div class="session-number">Séance 16</div>
+            <div class="session-number">Séance 15</div>
             <div class="field">Jour</div>
             <div class="value">lundi</div>
             <div class="field">Date</div>
@@ -311,8 +324,8 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 17</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 16</div>
             <div class="field">Jour</div>
             <div class="value">mardi</div>
             <div class="field">Date</div>
@@ -326,7 +339,7 @@
         </div>
     
         <div class="card afa">
-            <div class="session-number">Séance 18</div>
+            <div class="session-number">Séance 17</div>
             <div class="field">Jour</div>
             <div class="value">mercredi</div>
             <div class="field">Date</div>
@@ -337,8 +350,7 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 19</div>
+        <div class="card ferie">
             <div class="field">Jour</div>
             <div class="value">jeudi</div>
             <div class="field">Date</div>
@@ -349,8 +361,7 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 20</div>
+        <div class="card ferie">
             <div class="field">Jour</div>
             <div class="value">vendredi</div>
             <div class="field">Date</div>
@@ -361,8 +372,8 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 21</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 18</div>
             <div class="field">Jour</div>
             <div class="value">lundi</div>
             <div class="field">Date</div>
@@ -375,8 +386,8 @@
             <div class="value">1.011</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 22</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 19</div>
             <div class="field">Jour</div>
             <div class="value">mardi</div>
             <div class="field">Date</div>
@@ -390,7 +401,7 @@
         </div>
     
         <div class="card afa">
-            <div class="session-number">Séance 23</div>
+            <div class="session-number">Séance 20</div>
             <div class="field">Jour</div>
             <div class="value">mercredi</div>
             <div class="field">Date</div>
@@ -401,8 +412,8 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 24</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 21</div>
             <div class="field">Jour</div>
             <div class="value">jeudi</div>
             <div class="field">Date</div>
@@ -415,8 +426,8 @@
             <div class="value">1.011</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 25</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 22</div>
             <div class="field">Jour</div>
             <div class="value">vendredi</div>
             <div class="field">Date</div>
@@ -429,8 +440,8 @@
             <div class="value">1.007</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 26</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 23</div>
             <div class="field">Jour</div>
             <div class="value">lundi</div>
             <div class="field">Date</div>
@@ -443,8 +454,8 @@
             <div class="value">1.006</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 27</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 24</div>
             <div class="field">Jour</div>
             <div class="value">mardi</div>
             <div class="field">Date</div>
@@ -458,7 +469,7 @@
         </div>
     
         <div class="card afa">
-            <div class="session-number">Séance 28</div>
+            <div class="session-number">Séance 25</div>
             <div class="field">Jour</div>
             <div class="value">mercredi</div>
             <div class="field">Date</div>
@@ -469,8 +480,8 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 29</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 26</div>
             <div class="field">Jour</div>
             <div class="value">jeudi</div>
             <div class="field">Date</div>
@@ -483,8 +494,8 @@
             <div class="value">1.006</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 30</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 27</div>
             <div class="field">Jour</div>
             <div class="value">vendredi</div>
             <div class="field">Date</div>
@@ -497,8 +508,8 @@
             <div class="value">1.012</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 31</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 28</div>
             <div class="field">Jour</div>
             <div class="value">lundi</div>
             <div class="field">Date</div>
@@ -511,8 +522,8 @@
             <div class="value">1.011</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 32</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 29</div>
             <div class="field">Jour</div>
             <div class="value">mardi</div>
             <div class="field">Date</div>
@@ -526,7 +537,7 @@
         </div>
     
         <div class="card afa">
-            <div class="session-number">Séance 33</div>
+            <div class="session-number">Séance 30</div>
             <div class="field">Jour</div>
             <div class="value">mercredi</div>
             <div class="field">Date</div>
@@ -537,8 +548,8 @@
             <div class="value"></div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 34</div>
+        <div class="card ferie">
+            <div class="session-number">Séance 31</div>
             <div class="field">Jour</div>
             <div class="value">jeudi</div>
             <div class="field">Date</div>
@@ -551,8 +562,7 @@
             <div class="value">1.012</div>
         </div>
     
-        <div class="card">
-            <div class="session-number">Séance 35</div>
+        <div class="card ferie">
             <div class="field">Jour</div>
             <div class="value">vendredi</div>
             <div class="field">Date</div>
