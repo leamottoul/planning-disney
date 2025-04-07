@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Planning Anglais A0 - Version Corrigée Finale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Playfair+Display:wght@600&display=swap');
+
+        body {
+            background: linear-gradient(to bottom, #fdf6ff, #e6ddff);
+            font-family: 'Comfortaa', cursive;
+            color: #4b0082;
+            padding: 10px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #8e44ad;
+            text-shadow: 1px 1px 4px #ffffff;
+            margin: 20px 10px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 10px 15px;
+            margin: 10px 0;
+            box-shadow: 0 0 10px rgba(170, 130, 255, 0.3);
+            position: relative;
+            transition: 0.3s ease-in-out;
+        }
+
+        .card.today {
+            background: #fff6cc;
+            border: 2px solid #ffcc00;
+            font-weight: bold;
+            box-shadow: 0 0 15px #ffd700;
+        }
+
+        .card.today::before {
+            content: "⭐";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 2em;
+            animation: twinkle 1.5s infinite;
+        }
+
+        .card.afa {
+            background: #e0f7fa;
+            border: 2px dashed #26c6da;
+        }
+
+        .card.afa::before {
+            content: "📚";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 1.8em;
+        }
+
+        .card.ferie {
+            background: #ffe6e6;
+            border: 2px solid #ff4d4d;
+        }
+
+        .card.ferie::before {
+            content: "🔕";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 1.8em;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        .field {
+            font-size: 0.85em;
+            color: #8e44ad;
+            margin-bottom: 2px;
+        }
+
+        .value {
+            font-size: 1.1em;
+            margin-bottom: 6px;
+        }
+
+        .past {
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+
+        .session-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #6a0dad;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planning Anglais A0<br>Didier Laurent</h1>
+    <div id="planningContainer">
+
+        <div class="card">
+            <div class="session-number">Séance 1</div>
+            <div class="field">Jour</div>
+            <div class="value">lundi</div>
+            <div class="field">Date</div>
+            <div class="value">07-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.011</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 2</div>
+            <div class="field">Jour</div>
+            <div class="value">mardi</div>
+            <div class="field">Date</div>
+            <div class="value">08-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.016</div>
+        </div>
+    
+        <div class="card afa">
+            <div class="session-number">Séance 3</div>
+            <div class="field">Jour</div>
+            <div class="value">mercredi</div>
+            <div class="field">Date</div>
+            <div class="value">09-avr</div>
+            <div class="field">Modalité</div>
+            <div class="value">AFA</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 4</div>
+            <div class="field">Jour</div>
+            <div class="value">jeudi</div>
+            <div class="field">Date</div>
+            <div class="value">10-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.031</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 5</div>
+            <div class="field">Jour</div>
+            <div class="value">vendredi</div>
+            <div class="field">Date</div>
+            <div class="value">11-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.012</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 6</div>
+            <div class="field">Jour</div>
+            <div class="value">lundi</div>
+            <div class="field">Date</div>
+            <div class="value">14-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.016</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 7</div>
+            <div class="field">Jour</div>
+            <div class="value">mardi</div>
+            <div class="field">Date</div>
+            <div class="value">15-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.028</div>
+        </div>
+    
+        <div class="card afa">
+            <div class="session-number">Séance 8</div>
+            <div class="field">Jour</div>
+            <div class="value">mercredi</div>
+            <div class="field">Date</div>
+            <div class="value">16-avr</div>
+            <div class="field">Modalité</div>
+            <div class="value">AFA</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 9</div>
+            <div class="field">Jour</div>
+            <div class="value">jeudi</div>
+            <div class="field">Date</div>
+            <div class="value">17-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.028</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 10</div>
+            <div class="field">Jour</div>
+            <div class="value">vendredi</div>
+            <div class="field">Date</div>
+            <div class="value">18-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.012</div>
+        </div>
+    
+        <div class="card ferie">
+            <div class="field">Jour</div>
+            <div class="value">lundi</div>
+            <div class="field">Date</div>
+            <div class="value">21-avr</div>
+            <div class="field">Modalité</div>
+            <div class="value">férié</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 11</div>
+            <div class="field">Jour</div>
+            <div class="value">mardi</div>
+            <div class="field">Date</div>
+            <div class="value">22-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.008</div>
+        </div>
+    
+        <div class="card afa">
+            <div class="session-number">Séance 12</div>
+            <div class="field">Jour</div>
+            <div class="value">mercredi</div>
+            <div class="field">Date</div>
+            <div class="value">23-avr</div>
+            <div class="field">Modalité</div>
+            <div class="value">AFA</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 13</div>
+            <div class="field">Jour</div>
+            <div class="value">jeudi</div>
+            <div class="field">Date</div>
+            <div class="value">24-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.015</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 14</div>
+            <div class="field">Jour</div>
+            <div class="value">vendredi</div>
+            <div class="field">Date</div>
+            <div class="value">25-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:01</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.011</div>
+        </div>
+    
+        <div class="card afa">
+            <div class="session-number">Séance 15</div>
+            <div class="field">Jour</div>
+            <div class="value">lundi</div>
+            <div class="field">Date</div>
+            <div class="value">28-avr</div>
+            <div class="field">Modalité</div>
+            <div class="value">AFA</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 16</div>
+            <div class="field">Jour</div>
+            <div class="value">mardi</div>
+            <div class="field">Date</div>
+            <div class="value">29-avr</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:01</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.012</div>
+        </div>
+    
+        <div class="card afa">
+            <div class="session-number">Séance 17</div>
+            <div class="field">Jour</div>
+            <div class="value">mercredi</div>
+            <div class="field">Date</div>
+            <div class="value">30-avr</div>
+            <div class="field">Modalité</div>
+            <div class="value">AFA</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card ferie">
+            <div class="field">Jour</div>
+            <div class="value">jeudi</div>
+            <div class="field">Date</div>
+            <div class="value">01-mai</div>
+            <div class="field">Modalité</div>
+            <div class="value">férié</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card ferie">
+            <div class="field">Jour</div>
+            <div class="value">vendredi</div>
+            <div class="field">Date</div>
+            <div class="value">02-mai</div>
+            <div class="field">Modalité</div>
+            <div class="value">férié</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 18</div>
+            <div class="field">Jour</div>
+            <div class="value">lundi</div>
+            <div class="field">Date</div>
+            <div class="value">05-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.011</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 19</div>
+            <div class="field">Jour</div>
+            <div class="value">mardi</div>
+            <div class="field">Date</div>
+            <div class="value">06-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:01</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.011</div>
+        </div>
+    
+        <div class="card afa">
+            <div class="session-number">Séance 20</div>
+            <div class="field">Jour</div>
+            <div class="value">mercredi</div>
+            <div class="field">Date</div>
+            <div class="value">07-mai</div>
+            <div class="field">Modalité</div>
+            <div class="value">AFA</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 21</div>
+            <div class="field">Jour</div>
+            <div class="value">jeudi</div>
+            <div class="field">Date</div>
+            <div class="value">08-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.011</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 22</div>
+            <div class="field">Jour</div>
+            <div class="value">vendredi</div>
+            <div class="field">Date</div>
+            <div class="value">09-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:01</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.007</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 23</div>
+            <div class="field">Jour</div>
+            <div class="value">lundi</div>
+            <div class="field">Date</div>
+            <div class="value">12-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.006</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 24</div>
+            <div class="field">Jour</div>
+            <div class="value">mardi</div>
+            <div class="field">Date</div>
+            <div class="value">13-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.006</div>
+        </div>
+    
+        <div class="card afa">
+            <div class="session-number">Séance 25</div>
+            <div class="field">Jour</div>
+            <div class="value">mercredi</div>
+            <div class="field">Date</div>
+            <div class="value">14-mai</div>
+            <div class="field">Modalité</div>
+            <div class="value">AFA</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 26</div>
+            <div class="field">Jour</div>
+            <div class="value">jeudi</div>
+            <div class="field">Date</div>
+            <div class="value">15-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.006</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 27</div>
+            <div class="field">Jour</div>
+            <div class="value">vendredi</div>
+            <div class="field">Date</div>
+            <div class="value">16-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:01</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.012</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 28</div>
+            <div class="field">Jour</div>
+            <div class="value">lundi</div>
+            <div class="field">Date</div>
+            <div class="value">19-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.011</div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 29</div>
+            <div class="field">Jour</div>
+            <div class="value">mardi</div>
+            <div class="field">Date</div>
+            <div class="value">20-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel</div>
+            <div class="field">Local</div>
+            <div class="value">1.011</div>
+        </div>
+    
+        <div class="card afa">
+            <div class="session-number">Séance 30</div>
+            <div class="field">Jour</div>
+            <div class="value">mercredi</div>
+            <div class="field">Date</div>
+            <div class="value">21-mai</div>
+            <div class="field">Modalité</div>
+            <div class="value">AFA</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+        <div class="card">
+            <div class="session-number">Séance 31</div>
+            <div class="field">Jour</div>
+            <div class="value">jeudi</div>
+            <div class="field">Date</div>
+            <div class="value">22-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value">8:30-12:00</div>
+            <div class="field">Modalité</div>
+            <div class="value">présentiel + test ELAO</div>
+            <div class="field">Local</div>
+            <div class="value">1.012</div>
+        </div>
+    
+        <div class="card">
+            <div class="field">Jour</div>
+            <div class="value">vendredi</div>
+            <div class="field">Date</div>
+            <div class="value">23-mai</div>
+            <div class="field">Horaire</div>
+            <div class="value"></div>
+            <div class="field">Modalité</div>
+            <div class="value">Suivi Etienne et Magali</div>
+            <div class="field">Local</div>
+            <div class="value"></div>
+        </div>
+    
+    </div>
+    <script>
+        const cards = document.querySelectorAll(".card");
+        const today = new Date();
+        const months = {
+            "jan": 0, "fév": 1, "mar": 2, "avr": 3, "mai": 4, "jui": 5,
+            "jun": 5, "jul": 6, "aoû": 7, "sep": 8, "oct": 9, "nov": 10, "déc": 11
+        };
+
+        cards.forEach(card => {
+            const dateText = card.querySelectorAll(".value")[1].textContent.trim();
+            const [day, mon] = dateText.split("-");
+            if (!mon) return;
+
+            const normalizedMonth = mon.toLowerCase().slice(0, 3);
+            const monthIndex = months[normalizedMonth];
+            if (monthIndex === undefined) return;
+
+            const dateObj = new Date(2025, monthIndex, parseInt(day));
+            if (dateObj.toDateString() === today.toDateString()) {
+                card.classList.add("today");
+            } else if (dateObj < today) {
+                card.classList.add("past");
+            }
+        });
+    </script>
+</body>
+</html>
